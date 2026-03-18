@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>As 22 Consagradas Leis do Marketing — Grupo Daylan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!--  PIXEL TEXTURE BACKGROUND                                    -->
+<!-- ============================================================ -->
+<canvas id="pixelCanvas" aria-hidden="true"></canvas>
+
+<!-- ============================================================ -->
+<!--  STICKY NAV                                                   -->
+<!-- ============================================================ -->
+<nav id="siteNav" aria-label="Navegação principal">
+  <div class="nav-inner">
+    <span class="nav-logo">22 Leis</span>
+    <div class="nav-members" id="navMembers">
+      <!-- JS preenche -->
+    </div>
+    <button class="nav-menu-btn" id="navMenuBtn" aria-label="Menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- ============================================================ -->
+<!--  HERO / TOPO                                                  -->
+<!-- ============================================================ -->
+<header class="hero" id="hero">
+  <div class="hero-bg-glow" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero-eyebrow">
+      <span class="badge">Gestão de Marketing</span>
+      <span class="badge badge-outline">Seminário</span>
+    </div>
+    <h1 class="hero-title">
+      As <em>22</em><br />
+      <span class="white-word">Consagradas</span><br />
+      Leis do Marketing
+    </h1>
+    <div class="hero-laws">
+      <div class="law-pill" data-index="0">
+        <span class="pill-num">17</span>
+        <span class="pill-name">Lei da Imprevisibilidade</span>
+      </div>
+      <div class="law-pill" data-index="1">
+        <span class="pill-num">20</span>
+        <span class="pill-name">Lei do Sucesso</span>
+      </div>
+      <div class="law-pill" data-index="2">
+        <span class="pill-num">21</span>
+        <span class="pill-name">Lei do Fracasso</span>
+      </div>
+    </div>
+    <div class="hero-meta">
+      <div class="meta-block">
+        <span class="meta-label">Disciplina</span>
+        <span class="meta-value">Gestão de Marketing</span>
+      </div>
+      <div class="meta-divider" aria-hidden="true"></div>
+      <div class="meta-block">
+        <span class="meta-label">Entrega dos Slides</span>
+        <span class="meta-value">06 de Abril de 2025</span>
+      </div>
+      <div class="meta-divider" aria-hidden="true"></div>
+      <div class="meta-block">
+        <span class="meta-label">Tempo de Apresentação</span>
+        <span class="meta-value">10 min + 5 min Q&amp;A</span>
+      </div>
+    </div>
+    <div class="hero-team" id="heroTeam">
+      <!-- JS preenche -->
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================ -->
+<!--  COMANDO DA ATIVIDADE                                         -->
+<!-- ============================================================ -->
+<section class="section" id="comando">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Diretrizes</span>
+      <h2 class="section-title">Comando da Atividade</h2>
+      <p class="section-subtitle">Instruções e critérios de avaliação definidos pelo professor</p>
+    </div>
+    <div class="cards-grid" id="comandoCards">
+      <!-- JS preenche -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!--  ROTEIRO GERAL                                                -->
+<!-- ============================================================ -->
+<section class="section" id="roteiro-geral">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Visão Geral</span>
+      <h2 class="section-title">Roteiro Geral</h2>
+      <p class="section-subtitle">Script completo da apresentação e slides do grupo</p>
+    </div>
+
+    <div class="general-timer-bar">
+      <div class="gtimer-label">Cronômetro Geral</div>
+      <div class="gtimer-display" id="gTimerDisplay">10:00</div>
+      <div class="gtimer-controls">
+        <button class="timer-btn" id="gPlayBtn" aria-label="Play/Pause"><i class="fa-solid fa-play"></i></button>
+        <button class="timer-btn" id="gResetBtn" aria-label="Reset"><i class="fa-solid fa-rotate-left"></i></button>
+      </div>
+      <div class="gtimer-bar-track">
+        <div class="gtimer-bar-fill" id="gTimerFill"></div>
+      </div>
+    </div>
+
+    <div class="dual-panel">
+      <!-- Roteiro -->
+      <div class="panel panel-text" id="gRoteiroPanel">
+        <div class="panel-header">
+          <span class="panel-title"><i class="fa-solid fa-scroll"></i> Roteiro</span>
+          <div class="panel-actions">
+            <button class="icon-btn" id="gExpandBtn" aria-label="Expandir"><i class="fa-solid fa-expand"></i></button>
+          </div>
+        </div>
+        <div class="border-progress" id="gBorderProgress"><svg class="bp-svg" viewBox="0 0 100 100" preserveAspectRatio="none"><rect class="bp-rect" x="1" y="1" width="98" height="98" rx="8" ry="8"/></svg></div>
+        <textarea class="roteiro-input" id="gRoteiroText" placeholder="Digite o roteiro geral da apresentação…&#10;&#10;Inclua: abertura, introdução das leis, transições entre apresentadores, momento de Q&amp;A e fechamento."
+        >Abertura (Daylan — 45s)
+Bom [dia/tarde], todos! Meu nome é Daylan e esta é nossa equipe: Carla, Ana, Luís, Farouk e Toussaint. Hoje vamos apresentar três das 22 Consagradas Leis do Marketing de Al Ries e Jack Trout: a Lei da Imprevisibilidade, a Lei do Sucesso e a Lei do Fracasso.
+
+Lei da Imprevisibilidade (Daylan — 1min20s)
+[Daylan apresenta a lei e o case do livro]
+
+Cases — Lei da Imprevisibilidade (Carla — 1min30s)
+[Carla apresenta o case pesquisado pelo grupo]
+
+Lei do Sucesso (Ana — 1min20s)
+[Ana apresenta a lei e o case do livro]
+
+Cases — Lei do Sucesso (Luís — 1min30s)
+[Luís apresenta o case pesquisado pelo grupo]
+
+Lei do Fracasso (Farouk — 1min20s)
+[Farouk apresenta a lei e o case do livro]
+
+Cases + Fechamento (Toussaint — 1min30s + 45s)
+[Toussaint apresenta o case pesquisado e encerra a apresentação]</textarea>
+      </div>
+
+      <!-- Slides -->
+      <div class="panel panel-slides" id="gSlidesPanel">
+        <div class="panel-header">
+          <span class="panel-title"><i class="fa-solid fa-images"></i> Slides</span>
+          <div class="panel-actions">
+            <span class="slide-counter" id="gSlideCounter">1 / 1</span>
+            <button class="icon-btn" id="gAddSlideBtn" aria-label="Adicionar slide"><i class="fa-solid fa-plus"></i></button>
+          </div>
+        </div>
+        <div class="slides-viewport" id="gSlidesViewport">
+          <div class="slides-track" id="gSlidesTrack">
+            <!-- Slide slots gerados por JS -->
+          </div>
+        </div>
+        <div class="slides-nav">
+          <button class="slide-nav-btn" id="gPrevSlide" aria-label="Slide anterior"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="slide-dots" id="gSlideDots"></div>
+          <button class="slide-nav-btn" id="gNextSlide" aria-label="Próximo slide"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!--  SEÇÕES INDIVIDUAIS (geradas por JS)                          -->
+<!-- ============================================================ -->
+<div id="memberSections"></div>
+
+<!-- ============================================================ -->
+<!--  MAPA DE CONEXÕES                                             -->
+<!-- ============================================================ -->
+<section class="section" id="mapa-conexoes">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Relações</span>
+      <h2 class="section-title">Mapa de Conexões</h2>
+      <p class="section-subtitle">Como as três leis se relacionam com as demais 22 Leis do Marketing</p>
+    </div>
+    <div class="map-legend" id="mapLegend"></div>
+    <div class="map-wrapper">
+      <canvas id="lawsMapCanvas" aria-label="Mapa de conexões entre as leis"></canvas>
+      <div class="map-tooltip" id="mapTooltip"></div>
+    </div>
+    <div class="map-info" id="mapInfo">
+      <p>Passe o mouse sobre uma lei para ver sua descrição e conexões.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!--  FOOTER                                                       -->
+<!-- ============================================================ -->
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-text">
+      <span class="footer-brand">As 22 Consagradas Leis do Marketing</span>
+      <span class="footer-sep">·</span>
+      Gestão de Marketing
+      <span class="footer-sep">·</span>
+      Grupo Daylan
+      <span class="footer-sep">·</span>
+      2025
+    </p>
+    <p class="footer-credit">Baseado na obra de <em>Al Ries &amp; Jack Trout</em></p>
+  </div>
+</footer>
+
+<!-- ============================================================ -->
+<!--  MODAL IMAGEM FULLSCREEN                                      -->
+<!-- ============================================================ -->
+<div class="modal-overlay" id="imgModal" role="dialog" aria-modal="true" aria-label="Visualização de slide">
+  <button class="modal-close" id="imgModalClose" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button>
+  <img class="modal-img" id="imgModalImg" src="" alt="Slide em tela cheia" />
+</div>
+
+<!-- ============================================================ -->
+<!--  SCRIPTS                                                      -->
+<!-- ============================================================ -->
+<script src="js/data.js"></script>
+<script src="js/pixel-bg.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/timers.js"></script>
+<script src="js/slides.js"></script>
+<script src="js/references.js"></script>
+<script src="js/lawsmap.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
